@@ -3,7 +3,7 @@ Assignment2 ทดสอบ Replica MongoDB
 
 Step
 
-mkdir cm_replica_demo
+<li> mkdir cm_replica_demo
 cd cm_replica_demo
 mkdir r1
 mkdir r2
