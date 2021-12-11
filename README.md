@@ -6,12 +6,18 @@ Step
 mkdir cm_replica_demo
 <br>
 cd cm_replica_demo
+<br>
 mkdir r1
+<br>
 mkdir r2
+<br>
 mkdir r3
+<br>
 
 mongod --replSet mospito --logpath ./r1.log --dbpath ./r1 --port 27018 &
+<br>
 mongod --replSet mospito --logpath ./r2.log --dbpath ./r2 --port 27019 &
+<br>
 mongod --replSet mospito --logpath ./r3.log --dbpath ./r3 --port 27020 &
 
 
@@ -24,10 +30,13 @@ config = {_id: "mospito", members:[
 };
 
 rs.initiate(config);
+<br>
 rs.status();
 
 mongo --host mospito/localhost:27018,localhost:27019,localhost:27020
-use courses
+<br>
+use admin
+<br>
 db.getCollection('test').find({})
 
 
